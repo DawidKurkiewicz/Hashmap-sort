@@ -4,6 +4,7 @@ const HashMap = function(){
     this.size = 0;
     this.map = {};
   }
+
   HashMap.prototype = {
     add: function(key, value){
       if(!this.containsKey(key)){
@@ -27,9 +28,10 @@ const HashMap = function(){
     },
     get: function(key){
       return this.containsKey(key) ? this.map[key] : null;
-    },
+    }
 
 }
+console.log(HashMap)
 
 //task 2
 
@@ -51,7 +53,11 @@ const array = [
     {age:"22", name:"dawid",gender: "male"},
     {age:"22", name:"ola",gender: "female"},
     {age:"28", name:"patrycja",gender: "female"},
-    {age:"24", name:"dawid",gender: "male"}
+    {age:"24", name:"dawid",gender: "male"},
+    {age:"27", name:"marcin",gender: "male"},
+    {age:"28", name:"ania",gender: "female"}
+
+
 ];
 
 const groupedByName = groupBy(array, person => person.name);
@@ -61,4 +67,6 @@ const groupedByAge = groupBy(array, person => person.age);
 console.log(groupedByName.get("dawid"));
 console.log(groupedByAge.get("22"));
 console.log(groupedByGender.get("male"));
+console.log(groupedByGender.get("female"));
+
 
