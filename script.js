@@ -31,7 +31,6 @@ const HashMap = function(){
     }
 
 }
-console.log(HashMap)
 
 //task 2
 
